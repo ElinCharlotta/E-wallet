@@ -1,0 +1,49 @@
+@import '../../styles/_variables.scss';
+@import '../../styles/_mixins.scss';
+
+
+.cardform {
+    padding: $padding-m;
+    @include flexColumn;
+    gap: 0.5rem;
+    background-color: $background-color;
+    border-radius: 0.5rem;
+
+
+    &__card-number {
+        @include inputField;
+        border-radius: 0.5rem;
+        border: 1px solid;
+        height: $height-m;
+        width: $width-m;
+    }
+
+    &__card-name {
+        @include inputField;
+        border-radius: 0.5rem;
+        border: 1px solid $background-color;
+        height: $height-m;
+        width: $width-m;
+
+    }
+
+    &__card-vendor {
+        border-radius: 0.5rem;
+        border: 1px solid $background-color;
+        width: $width-m;
+        padding: $padding-m;
+    }
+
+}
+
+.card-section {
+    &__card-cvc {
+        @include inputField;
+        border: 1px solid $background-color;
+    }
+
+    &__card-expiry {
+        @include inputField;
+        border: 1px solid $background-color;
+    }
+}

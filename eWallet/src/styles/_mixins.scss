@@ -1,0 +1,12 @@
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin inputField {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 0.2rem;
+}
