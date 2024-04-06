@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom';
 import { addCard } from '../../Redux/cardSlice';
 import './CardForm.scss';
 import Card from '../Card/Card';
 
-
 function CardForm() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
+  
 
     const [cardData, setCardData] = useState({
         cardholder: '',
         number: '',
         expiry: '',
         cvc: '',
+        vendor:'',
         active: true
     });
 
@@ -29,15 +30,14 @@ function CardForm() {
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log("Form data after dispatch:", cardData);
-    
+
         dispatch(addCard(cardData)); // Uppdatera Redux med ny kortinformation
-    
+
         navigate('/')
     };
 
     return (
         <>
-        
             <Card cardData={cardData} />
             <div className="cardform">
                 <form onSubmit={handleSubmit}>
@@ -70,8 +70,15 @@ function CardForm() {
                         value={cardData.cvc}
                         onChange={handleChange}
                     />
+                    <select name="vendor" id='vendor' value={cardData.vendor} onChange={handleChange}>
+                        <option value="default">Select Vendor</option>
+                        <option value="Bitcoin Inc">Bitcoin Inc</option>
+                        <option value="Ninja Bank">Ninja Bank</option>
+                        <option value="Block Chain Inc">Block Chain Inc</option>
 
-                    <button type="submit">Add Card</button>
+                        <option value="Evil Corp">Evil Corp</option>
+                    </select>
+                    <button type="submit" className="activeBtn">Add Card</button>
                 </form>
             </div>
         </>
