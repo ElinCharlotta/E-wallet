@@ -5,11 +5,10 @@ import Top from '../components/Top/Top';
 import CardStack from '../components/CardStack/CardStack';
 
 function Home() {
+
     const navigate = useNavigate();
-   
+  
     const cards = useSelector(state => state.cards.cards);
-
-
 
     const handleAddCardClick = () => {
         navigate('/addcard');

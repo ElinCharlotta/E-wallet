@@ -70,12 +70,11 @@ function CardForm() {
                         value={cardData.cvc}
                         onChange={handleChange}
                     />
-                    <select name="vendor" id='vendor' value={cardData.vendor} onChange={handleChange}>
+                    <select name="vendor" value={cardData.vendor} onChange={handleChange}>
                         <option value="default">Select Vendor</option>
-                        <option value="Bitcoin Inc">Bitcoin Inc</option>
+                        <option value="Bitcoin Inc" >Bitcoin Inc</option>
                         <option value="Ninja Bank">Ninja Bank</option>
                         <option value="Block Chain Inc">Block Chain Inc</option>
-
                         <option value="Evil Corp">Evil Corp</option>
                     </select>
                     <button type="submit" className="activeBtn">Add Card</button>

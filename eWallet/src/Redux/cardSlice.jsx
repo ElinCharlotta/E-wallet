@@ -3,21 +3,12 @@ import { createSlice } from '@reduxjs/toolkit';
 const cardSlice = createSlice({
     name: 'card',
     initialState: {
-        activeCard: {
-            cardholder: '',
-            number: '',
-            expiry: '',
-            cvc: '',
-            vendor: '',
-            active: true
-        },
+        activeCard: null, 
         cards: [],
-        selectedCard: null, 
     },
     reducers: {
         addCard: (state, action) => {
             console.log("New card data in reducer:", action.payload);
-
             state.cards.push(action.payload);
         },
         moveCardToTop: (state, action) => {
@@ -35,9 +26,12 @@ const cardSlice = createSlice({
                 state.cards.unshift(cardToMove); // Lägg till kortet längst upp i listan
             }
         },
-        
+        setSelectedCard: (state, action) => {
+            console.log('selectedCard Payload:', action.payload);
+            state.activeCard = action.payload;
+        },
     }
 });
 
-export const { addCard, moveCardToTop,  } = cardSlice.actions;
+export const { addCard, moveCardToTop, setSelectedCard } = cardSlice.actions;
 export default cardSlice.reducer;
