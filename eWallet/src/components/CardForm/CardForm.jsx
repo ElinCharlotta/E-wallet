@@ -70,7 +70,7 @@ function CardForm() {
                         value={cardData.cvc}
                         onChange={handleChange}
                     />
-                    <select name="vendor" value={cardData.vendor} onChange={handleChange}>
+                    <select className='vendor-select' name="vendor" value={cardData.vendor} onChange={handleChange}>
                         <option value="default">Select Vendor</option>
                         <option value="Bitcoin Inc" >Bitcoin Inc</option>
                         <option value="Ninja Bank">Ninja Bank</option>

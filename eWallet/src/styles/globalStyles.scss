@@ -1,0 +1,37 @@
+@import '../styles/_variables.scss';
+@import '../styles/_mixins.scss';
+
+.vendor-style {
+
+
+    &.bitcoin {
+        color: $font-color-dark;
+        background: $bitcoin-icon, $bitcoin-bg;
+        @include icon-position;
+        
+    }
+
+    &.ninja {
+        color: $font-color-light;
+        background:$ninja-icon, $ninja-bg;
+        @include icon-position;
+    }
+
+    &.block {
+        color: $font-color-light;
+        background: $blockchain-icon, $blockchain-bg;
+        @include icon-position;
+    }
+
+    &.evil {
+        color: $font-color-light;
+        background:$evil-icon, $evil-bg;
+        @include icon-position;
+     
+    }
+    &.default {
+        color: $font-color-light;
+        background: $default-icon, $default-bg;
+        @include icon-position;
+    }
+}

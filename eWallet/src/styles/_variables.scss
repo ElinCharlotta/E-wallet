@@ -1,18 +1,41 @@
-$background-color: #dcdcdc;
+$background-color-light: #dcdcdc;
 $background-color-gray:#D0D0D0;
 
-$font-color: rgba(0, 0, 0, 1);
+//fonts
+$font-family: 'Source Code Pro', monospace;
+$fonst-size-small: 0.8rem;
 
+// font color
+$font-color-dark: rgba(0, 0, 0, 1);
+$font-color-light:#FFFFFF;
+
+//padding
 $padding-m: 1rem;
 $padding-l: 2rem;
 
-
+//margin
 $margin-m: 1rem;
 $margin-l: 2rem;
+$margin-xl: 6rem;
 
-
+//(width and height)
 $width-m: 380px;
 $width-l: 500px;
 
 $height-m: 30px;
 $height-l: 40px;
+
+//background-color cards
+$bitcoin-bg: linear-gradient(0deg, #FFAE34, #FFAE34), linear-gradient(248.04deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 99.07%);
+$ninja-bg: linear-gradient(0deg, #222222, #222222), linear-gradient(248.3deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+$blockchain-bg: linear-gradient(0deg, #8B58F9, #8B58F9), linear-gradient(248.52deg, rgba(0, 0, 0, 0.15) 1.49%, rgba(0, 0, 0, 0) 100%);
+$evil-bg: linear-gradient(0deg, #F33355, #F33355), linear-gradient(248.3deg, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0) 100%);
+$default-bg: linear-gradient(0deg, #D0D0D0, #c5c2c2), // första gradienten
+linear-gradient(248.3deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255,0)100%);
+
+// SVG-bilder för olika vendors
+$bitcoin-icon: url('../assets/vendor-bitcoin.svg')no-repeat top right ;
+$ninja-icon: url('../assets/vendor-ninja.svg')no-repeat top right ;
+$blockchain-icon: url('../assets/vendor-blockchain.svg')no-repeat top right ;
+$evil-icon: url('../assets/vendor-evil.svg')no-repeat top right ;
+$default-icon: url('../assets/vendor-bitcoin.svg') no-repeat top right;
