@@ -1,0 +1,23 @@
+@import '../styles/mixins.scss';
+@import '../styles/_variables.scss';
+
+
+.home {
+    @include flexColumn;
+    display: flex;
+
+
+    &__container {
+
+        @include flexColumn;
+        margin-bottom: $margin-l;
+    }
+
+
+    &__button {
+        @include button;
+        background-color: $background-color-light;
+        z-index: 1;
+        margin-top: 12rem;
+    }
+}

@@ -5,7 +5,9 @@ import './Card.scss';
 
 function Card({ cardData, onClick }) {
     console.log('Card data:', cardData);
+
     const { vendor } = cardData
+    
     const cardNumberDisplay = cardData && cardData.number ? cardData.number : 'XXXX XXXX XXXX XXXX';
     const cardHolderName = cardData && cardData.cardholder ? cardData.cardholder : 'FIRSTNAME LASTNAME';
     const validThru = cardData && cardData.expiry ? cardData.expiry : 'MM/YY'

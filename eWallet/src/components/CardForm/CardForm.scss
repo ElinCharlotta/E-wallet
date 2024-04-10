@@ -3,43 +3,74 @@
 
 
 .cardform {
-    padding: $padding-m;
+    padding-top: $padding-m;
+    margin-top: $margin-l;
     @include flexColumn;
     gap: 0.5rem;
     background-color: $background-color-light;
     border-radius: 0.5rem;
+    margin-bottom: $margin-xl;
 
+    &__title {
+        width: 90%;
+        padding-left: $padding-m;
+        padding-top: $padding-s;
+        text-align: left;
+        margin: 0;
+        font-size: $font-size-small;
+    }
 
     &__card-number {
+        width: 90%;
         @include inputField;
         border-radius: 0.5rem;
         border: 1px solid;
-        height: $height-m;
-        width: $width-m;
     }
 
     &__card-name {
         @include inputField;
+        width: 90%;
         border-radius: 0.5rem;
         border: 1px solid $background-color-light;
-        height: $height-m;
-        width: $width-m;
-
     }
 
     &__card-vendor {
+        width: 90%;
         border-radius: 0.5rem;
         border: 1px solid $background-color-light;
-        width: $width-m;
-        padding: $padding-m;
+
     }
+
 
 }
 
+.activeBtn {
+    @include button;
+    width: 50%;
+    color: $font-color-light;
+    margin-bottom: $margin-m;
+    ;
+}
+
 .card-section {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 1rem;
+
+    &__title-expiry,
+    &__title-cvc {
+        text-align: left;
+        margin-bottom: 0;
+        padding-left: $padding-s;
+        font-size: $font-size-small;
+    }
+
     &__card-cvc {
         @include inputField;
         border: 1px solid $background-color-light;
+
     }
 
     &__card-expiry {
@@ -48,7 +79,7 @@
     }
 }
 
-.vendor-select{
+.vendor-select {
     border-radius: 8px;
     border: 1px solid transparent;
     padding: 0.6em 1.2em;
@@ -56,5 +87,5 @@
     font-weight: 500;
     font-family: inherit;
     transition: border-color 0.25s;
-  
+
 }

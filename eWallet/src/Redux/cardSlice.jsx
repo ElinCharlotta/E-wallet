@@ -11,7 +11,7 @@ const cardSlice = createSlice({
             console.log("New card data in reducer:", action.payload);
             state.cards.push(action.payload);
         },
-        moveCardToTop: (state, action) => {
+        /*moveCardToTop: (state, action) => {
             const cardToMove = action.payload;
             const existingCardIndex = state.cards.findIndex(card => {
                 return card.cardholder === cardToMove.cardholder &&
@@ -25,7 +25,9 @@ const cardSlice = createSlice({
                 state.cards.splice(existingCardIndex, 1); // Ta bort kortet från nuvarande position
                 state.cards.unshift(cardToMove); // Lägg till kortet längst upp i listan
             }
-        },
+        },*/
+
+ 
         setSelectedCard: (state, action) => {
             console.log('selectedCard Payload:', action.payload);
             state.activeCard = action.payload;
