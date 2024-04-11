@@ -5,7 +5,6 @@ import Card from '../Card/Card';
 
 function Top() {
     const selectedCard = useSelector(state => state.cards.activeCard);
-    console.log('vad är det som sker', selectedCard);
 
     return (
         <div className="top">

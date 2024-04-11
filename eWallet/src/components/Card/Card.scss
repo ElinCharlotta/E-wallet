@@ -27,15 +27,17 @@
     }
 
     &__information {
+        margin-top: $margin-m ;
+        width: 100%;
         display: flex;
 
-
         &__left {
-            margin-right: $margin-m;
+
+            width: 100%;
         }
 
         &__right {
-            margin-left: $margin-m;
+            width: 100%;
         }
 
         &__cardholder-name {

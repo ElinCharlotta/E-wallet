@@ -91,7 +91,7 @@ function CardForm() {
                         <option value="Block Chain Inc">Block Chain Inc</option>
                         <option value="Evil Corp">Evil Corp</option>
                     </select>
-                    <button type="submit" className="activeBtn">Add Card</button>
+                    <button type="submit" className="addBtn">Add Card</button>
                 </form>
             </div>
         </>

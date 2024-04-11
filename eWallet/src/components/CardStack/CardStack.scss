@@ -1,11 +1,8 @@
-@import '../../styles/mixins.scss';
-
 .card-stack {
-    @include flexColumn;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 }
 
 .card-wrapper {
+    position: relative;
     margin-bottom: -150px;
 }

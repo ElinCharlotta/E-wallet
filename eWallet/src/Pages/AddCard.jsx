@@ -8,6 +8,7 @@ function AddCard() {
   
     return (
         <div className='addcard'>
+            
             <h1>AddCard</h1>
 
             <CardForm />

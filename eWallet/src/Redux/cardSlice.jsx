@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const cardSlice = createSlice({
     name: 'card',
     initialState: {
-        activeCard: null, 
+        activeCard: null,
         cards: [],
     },
     reducers: {
@@ -27,7 +27,7 @@ const cardSlice = createSlice({
             }
         },*/
 
- 
+
         setSelectedCard: (state, action) => {
             console.log('selectedCard Payload:', action.payload);
             state.activeCard = action.payload;
@@ -35,5 +35,5 @@ const cardSlice = createSlice({
     }
 });
 
-export const { addCard, moveCardToTop, setSelectedCard } = cardSlice.actions;
+export const { addCard, /*moveCardToTop,*/ setSelectedCard } = cardSlice.actions;
 export default cardSlice.reducer;

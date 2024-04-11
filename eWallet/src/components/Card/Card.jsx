@@ -13,7 +13,7 @@ function Card({ cardData, onClick }) {
     const validThru = cardData && cardData.expiry ? cardData.expiry : 'MM/YY'
 
     return (
-        <main>
+        <main className='main-card'>
             <div className={`card ${vendor.toLowerCase()} vendor-style`} onClick={onClick}>
                 <img className='card__chip' src={Chip} alt='chip' />
                 <p className='card__number'>{cardNumberDisplay}</p>
