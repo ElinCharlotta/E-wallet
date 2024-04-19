@@ -1,39 +1,35 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+
+
 const cardSlice = createSlice({
     name: 'card',
     initialState: {
-        activeCard: null,
-        cards: [],
+        cards: JSON.parse(localStorage.getItem('cards')) || [],
+
     },
     reducers: {
         addCard: (state, action) => {
-            console.log("New card data in reducer:", action.payload);
-            state.cards.push(action.payload);
+            const createId = Math.floor(Math.random() * 1000);
+            const newCard = { ...action.payload, id: createId };
+            state.cards.push(newCard);
+            localStorage.setItem('cards', JSON.stringify(state.cards));
         },
-        /*moveCardToTop: (state, action) => {
-            const cardToMove = action.payload;
-            const existingCardIndex = state.cards.findIndex(card => {
-                return card.cardholder === cardToMove.cardholder &&
-                       card.number === cardToMove.number &&
-                       card.expiry === cardToMove.expiry &&
-                       card.cvc === cardToMove.cvc &&
-                       card.active === cardToMove.active;
-            });
-            
-            if (existingCardIndex !== -1) {
-                state.cards.splice(existingCardIndex, 1); // Ta bort kortet från nuvarande position
-                state.cards.unshift(cardToMove); // Lägg till kortet längst upp i listan
-            }
-        },*/
+        removeCard: (state, action) => {
+            const cardRemovedById = action.payload;
+            const updatedCards = state.cards.filter(card => card.id !== cardRemovedById.id);
+            state.cards = updatedCards;
+            localStorage.setItem('cards', JSON.stringify(updatedCards));
+        },
 
 
-        setSelectedCard: (state, action) => {
+        selectedCard: (state, action) => {
             console.log('selectedCard Payload:', action.payload);
-            state.activeCard = action.payload;
+            state.selectedActiveCard = action.payload;
+            console.log('activeCard setSel:', state.selectedActiveCar);
         },
     }
 });
 
-export const { addCard, /*moveCardToTop,*/ setSelectedCard } = cardSlice.actions;
+export const { addCard, removeCard, selectedCard } = cardSlice.actions;
 export default cardSlice.reducer;

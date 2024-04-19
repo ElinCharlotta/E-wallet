@@ -32,12 +32,15 @@
         display: flex;
 
         &__left {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 120%;
 
-            width: 100%;
         }
 
         &__right {
-            width: 100%;
+            width: 50%;
         }
 
         &__cardholder-name {
@@ -49,6 +52,7 @@
         &__cardholder {
             margin: 0;
             text-align: left;
+
         }
 
 

@@ -1,8 +1,8 @@
 .card-stack {
-    position: relative;
+    margin-bottom: 2rem;
 }
 
 .card-wrapper {
-    position: relative;
-    margin-bottom: -150px;
+    Display: grid;
+    Grid-template-rows: 45px 1fr
 }

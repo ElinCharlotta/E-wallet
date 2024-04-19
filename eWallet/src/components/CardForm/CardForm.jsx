@@ -29,7 +29,7 @@ function CardForm() {
         event.preventDefault();
         console.log("Form data after dispatch:", cardData);
 
-        dispatch(addCard(cardData)); // Uppdatera Redux med ny kortinformation
+        dispatch(addCard(cardData)); 
 
         navigate('/')
     };
